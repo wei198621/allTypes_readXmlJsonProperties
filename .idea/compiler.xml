@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="_01Simple02" />
+        <module name="_03jsoup" />
+        <module name="_04jackson" />
+        <module name="_05fastjson" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="02dom4j" target="1.5" />
+      <module name="05fastjson" target="1.5" />
+      <module name="_01Simple" target="1.6" />
+      <module name="_01Simple02" target="1.7" />
+      <module name="_02dom4j" target="1.5" />
+      <module name="_03jsoup" target="1.5" />
+      <module name="_04jackson" target="1.5" />
+      <module name="_05fastjson" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -31,14 +31,13 @@ public class ReadByFileInpuStream {
     }
 
     private static void InputStreamReader01() throws IOException {
-        String fileName="E://tempData//productType20200408.txt";
+        String fileName="D://temp//tempdata//product4FileReader.txt";
         String encoding="utf-8";
         File file = new File(fileName);
         if(file.isFile() && file.exists()) {
             String strTmp = "";     //临时变量
             StringBuilder stringBuilder = new StringBuilder();   //
             InputStream inputStream = new FileInputStream(file);
-            //InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
             Reader inputStreamReader = new InputStreamReader(inputStream,encoding);  //如果需要进行编码
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             while ((strTmp = bufferedReader.readLine()) != null) {

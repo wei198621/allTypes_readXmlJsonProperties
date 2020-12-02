@@ -21,10 +21,7 @@ public class mainTest {
 
     public static void main(String[] args) throws IOException {
 
-
-
         System.out.println("=====================001======================");
-
 
         // System.out.println("true = " + true);
         InputStream inputStream = mainTest.class.getResourceAsStream("/originalData81.txt");

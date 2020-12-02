@@ -1,10 +1,8 @@
 package com.tz.leo.readProperties;
 
 import org.springframework.core.io.support.PropertiesLoaderUtils;
-
 import java.io.IOException;
 import java.util.Properties;
-
 /**
  * Author: tz_wl
  * Date: 2020/8/13 15:35
@@ -12,8 +10,6 @@ import java.util.Properties;
  */
 public class ReadPropertiesTest04 {
     public static void main(String[] args) throws IOException {
-
-
         String fileName = "redisConfig.properties";
         Properties props = new Properties();
         props=PropertiesLoaderUtils.loadAllProperties(fileName);

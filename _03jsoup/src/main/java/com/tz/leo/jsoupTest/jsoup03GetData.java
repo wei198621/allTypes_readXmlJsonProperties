@@ -21,6 +21,8 @@ import java.net.URL;
  */
 public class jsoup03GetData {
     public static void main(String[] args) throws IOException {
+
+
         String html = "<html><body><p>Hello HTML</p></body></html>";
         Document doc = Jsoup.parse(html);
         System.out.println("基于字符串方式得到的 Document:\\r\\n" + doc);

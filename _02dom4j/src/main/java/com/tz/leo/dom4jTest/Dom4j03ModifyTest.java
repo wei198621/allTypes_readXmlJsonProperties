@@ -22,8 +22,8 @@ public class Dom4j03ModifyTest {
     public static void main(String[] args) {
 
         //需要是本地真实路径
-        String localPath = "D:\\04_CodeFromNet\\allTypes_readXmlJsonProperties\\_02dom4j\\src\\main\\resources\\";
-        String fileName = "dom4jhtml20200814.html";
+        String localPath = "D:\\temp\\tempdata\\";
+        String fileName = "dom4jhtml20200815.html";
         //修改一个文档
         ModifyXmlFile(localPath, fileName, "dom4jhtmlNew.html");
         //格式化一个文档

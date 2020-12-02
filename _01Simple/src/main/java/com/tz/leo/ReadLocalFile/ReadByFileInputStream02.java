@@ -19,7 +19,7 @@ public class ReadByFileInputStream02 {
         //java.io.FileInputStream
         //java.io.BufferedInputStream
 
-        String fileName="E://tempData//productType20200408.txt";
+        String fileName="D://temp//tempdata//product4FileReader.txt";
         String encoding="utf-8";
         InputStream inputStream = new FileInputStream(fileName);
         BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);

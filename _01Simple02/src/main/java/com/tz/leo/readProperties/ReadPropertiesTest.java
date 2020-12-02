@@ -25,7 +25,6 @@ public class ReadPropertiesTest {
         props.load(reader);
         //  加载完成  查看 打印效果
         String str= props.getProperty("redis.ip");
-        System.out.println(str);                     // 127.0.0.1
-
+        System.out.println(str);                   // 127.0.0.1
     }
 }

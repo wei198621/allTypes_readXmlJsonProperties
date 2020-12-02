@@ -18,8 +18,8 @@ import java.io.IOException;
 public class Dom4j02CreateTest {
     public static void main(String[] args) throws IOException {
 
-        String localFilePath = "D:\\04_CodeFromNet\\allTypes_readXmlJsonProperties\\_02dom4j\\src\\main\\resources\\";
-        String fileName = "dom4jhtml20200815.html";
+        String localFilePath = "D:\\temp\\tempdata\\";
+        String fileName = "dom4jhtml"+ cn.hutool.core.date.SystemClock.now() + ".html";
         //建立一个XML文档
         createXMLFile2(localFilePath+ fileName);
         formatXMLFile(localFilePath+ fileName);

@@ -14,13 +14,10 @@ import java.io.Reader;
  * new BufferedReader( )
  *                    new FileReader( )
  *                                    new File( )
- * 本地磁盘放置文件  E://tempData//productType20200408.txt
- * String fileName="E://tempData//productType20200408.txt";
- File file=new File(fileName);
- FileReader fileReader =new FileReader(file);
+ *
  BufferedReader bufferedReader =new BufferedReader(fileReader);
- strTemp=bufferedReader.readLine()
- System.out.println(strTemp);
+                                       FileReader fileReader =new FileReader(file);
+                                                                        File file=new File(fileName);
  */
 public class ReadByFileReaderTest {
     public static void main(String[] args) throws IOException {
@@ -28,7 +25,7 @@ public class ReadByFileReaderTest {
         //java.io.FileReader
         //java.io.BufferedReader
 
-        String fileName="E://tempData//productType20200408.txt";
+        String fileName="D://temp//tempdata//product4FileReader.txt";
         File file=new File(fileName);
         if( file.isFile() && file.exists()) {
             Reader fileReader = new FileReader(file);

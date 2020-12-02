@@ -20,22 +20,19 @@ public class Dom4jTest {
 
     public static void main(String[] args) throws IOException, DocumentException {
 
-/*
 
-        //01  读取Resource目录下的文件
+  /*      //01  读取Resource目录下的文件
         InputStream inputStream = Dom4jTest.class.getResourceAsStream("/xmlTest202008.xml");
         ReadStreamByDom4j(inputStream);
 */
 
-
         //0201  读取本地磁盘下的文件
-        String fileName0201="E://tempData//xmlTest20200408.txt";
+        String fileName0201="d://temp//tempdata//xmlTest20200408.txt";
         FileInputStream fileInputStream0201 =new FileInputStream(fileName0201);
         ReadStreamByDom4j(fileInputStream0201);
 
-
 /*        //0201  读取本地磁盘下的文件
-        String fileName="E://tempData//xmlTest20200408.txt";
+        String fileName0201="d://temp//tempdata//xmlTest20200408.txt";
         File file=new File(fileName);
         FileInputStream fileInputStream =new FileInputStream(file);
         ReadStreamByDom4j(fileInputStream);*/

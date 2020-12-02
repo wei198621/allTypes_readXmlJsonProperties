@@ -1,0 +1,10 @@
+#用于忽略单个项目的
+/.idea
+/*.iml
+/target
+/.gradle
+#用于忽略父子项目
+*/.idea
+*/*.iml
+*/target
+*/.gradle

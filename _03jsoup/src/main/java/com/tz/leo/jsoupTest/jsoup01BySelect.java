@@ -14,8 +14,9 @@ public class jsoup01BySelect {
 
     static org.jsoup.nodes.Document doc;
     public static void main(String[] args) throws IOException {
-
-        File f =new File(ClassLoader.getSystemResource("jsoupHtml4Select.html").getPath());
+        String path = ClassLoader.getSystemResource("jsoupHtml4Select.html").getPath();
+        System.out.println(path);
+        File f =new File(path);
         if(!f.exists()){
             return;
         }

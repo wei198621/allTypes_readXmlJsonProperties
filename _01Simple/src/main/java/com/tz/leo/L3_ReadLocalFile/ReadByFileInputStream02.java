@@ -1,4 +1,4 @@
-package com.tz.leo.ReadLocalFile;
+package com.tz.leo.L3_ReadLocalFile;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -10,16 +10,24 @@ import java.nio.charset.Charset;
  * Author: tz_wl
  * Date: 2020/8/13 14:21
  * Content:    还是会有 字符集的问题  me":"通� �产品组","groupcode":
- * new BufferedInputStream(  )
- *                         new FileInpuStream( )
+ *
  */
 public class ReadByFileInputStream02 {
     public static void main(String[] args) throws IOException {
+        ReadFileByInpuStreamGood();
+        return;
 
-        //java.io.FileInputStream
-        //java.io.BufferedInputStream
+    }
 
-        String fileName="D://temp//tempdata//product4FileReader.txt";
+    /**
+     *                                                          fileName
+     *                              inputStream = new FileInputStream(fileName);
+     *          bufferedInputStream = new BufferedInputStream(inputStream);
+     * @throws IOException
+     */
+    private static void ReadFileByInpuStreamGood() throws IOException {
+        //String fileName="D://temp//tempdata//product4FileReader.txt";
+        String fileName = ReadByFileInpuStream.class.getResource("/product4FileReader.txt").getPath();
         String encoding="utf-8";
         InputStream inputStream = new FileInputStream(fileName);
         BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);

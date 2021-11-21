@@ -4,6 +4,8 @@ import org.dom4j.Document;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -16,11 +18,15 @@ import java.io.IOException;
  * https://blog.csdn.net/linmengmeng_1314/article/details/79975599
  */
 public class Dom4j02CreateTest {
-    public static void main(String[] args) throws IOException {
 
-        String localFilePath = "D:\\temp\\tempdata\\";
+    private static Logger logger = LoggerFactory.getLogger(Dom4j02CreateTest.class);
+
+    public static void main(String[] args) throws IOException {
+        //String localFilePath = "D:\\temp\\tempdata\\";
+        String localFilePath = Dom4j02CreateTest.class.getResource("/").getPath();
         String fileName = "dom4jhtml"+ cn.hutool.core.date.SystemClock.now() + ".html";
         //建立一个XML文档
+        logger.info(localFilePath+ fileName);
         createXMLFile2(localFilePath+ fileName);
         formatXMLFile(localFilePath+ fileName);
     }

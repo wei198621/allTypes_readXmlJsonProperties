@@ -3,9 +3,23 @@ allTypes_readXmlJsonProperties
 
 ************************************************************************************************************
 ************************ 01  Simple  读取本地磁盘文件   *********************************
+0101
+测试文件下载目录
+1. 本地磁盘放置文件  E://tempData//productType20200408.txt
+2. /resources/productType20200408.txt
 
+0102
+对比两种方式获取properties 文件，
+方式一：  class.getResourceAsStream("/properties/test.properties");
+方式二：  class.getClassLoader().getResourceAsStream("properties/test.properties");
+方式一： 类的根目录，就是当前程序跟目录 /target/classes/
+方式二： ClassLoader（类加载器）获取资源，而类加载器默认是从 classPath 下获取资源的，
 
-本地磁盘放置文件  E://tempData//productType20200408.txt
+0103
+L2_ReadResource 各种获取路径方法 会一种就可以了
+
+0104
+三种方式获取本地文件（速度没有比较），用第三种 InputStream 方式，结构清晰
 --------------------------------------------------------------------------------ReadByFileReaderTest-----------------
  * new BufferedReader( )
  *                    new FileReader( )
@@ -20,23 +34,37 @@ allTypes_readXmlJsonProperties
 
 
 ************************************************************************************************************
-************************  0102  Simple 读取resource下面的properties文件    *********************************
+************************  01  Simple 读取resource下面的properties文件    *********************************
+
+
+    // 最简单获取路径方法
+    private static void getPathSimplest() {
+        String path = ClassLoader.getSystemResource("redisConfig.properties").getPath();
+        System.out.println(path);
+    }
+
 
 https://www.jianshu.com/p/efdd1a526939
 Java 读取配置文件的五种方式
-
---------------------------------------------------------------------------------ReadPropertiesTest---------------
- * props.load ( )
- *             new InputStreamReader(  )
- *                                    ReadPropertiesTest.class.getClass().getResourceAsStream(path);
-
 --------------------------------------------------------------------------------ReadProperties02WithResourceBundle----
  java.util.ResourceBundle 方式获取  一般不用
 
+--------------------------------------------------------------------------------ReadPropertiesTest---------------
+
+        String path="/redisConfig.properties";
+        Properties props = new Properties();
+        InputStream stream = ReadPropertiesTest.class.getClass().getResourceAsStream(path);
+        props.load(stream);
+只用三步，引用的是jdk 自己的包 比较轻量级。
+
+
 --------------------------------------------------------------------------------ReadPropertiesTest04---------------
 org.springframework.core.io.support.PropertiesLoaderUtils;
-PropertiesLoaderUtils.loadAllProperties(fileName);  直接加载数据到 Properties  spring就是好一步到位
 
+       String fileName = "redisConfig.properties";
+        Properties props = new Properties();
+        props=PropertiesLoaderUtils.loadAllProperties(fileName);
+只用两步，直接加载数据到 Properties ，需要引入spring框架
 
 ************************************************************************************************************
 ************************  02 dom4j    *********************************

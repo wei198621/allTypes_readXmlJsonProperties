@@ -1,4 +1,7 @@
-package com.tz.leo.ReadLocalFile;
+package com.tz.leo.L3_ReadLocalFile;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -20,6 +23,9 @@ import java.io.Reader;
  * str= bufferedReader.readLine()
  */
 public class ReadByFileInpuStream {
+
+    private static Logger logger = LoggerFactory.getLogger(ReadByFileInpuStream.class);
+
     public static void main(String[] args) throws IOException {
         //java.io.InputStream
         //java.io.FileInputStream
@@ -30,8 +36,19 @@ public class ReadByFileInpuStream {
 
     }
 
+    /**
+     *
+     * @throws IOException
+     *
+     *                                                                                                       fileName
+     *                                                                                          file = new File(fileName);
+     *                                                              inputStream = new FileInputStream(file);
+     *                        inputStreamReader = new InputStreamReader(inputStream,encoding);  //如果需要进行编码
+     * bufferedReader = new BufferedReader(inputStreamReader);
+     */
     private static void InputStreamReader01() throws IOException {
-        String fileName="D://temp//tempdata//product4FileReader.txt";
+        //String fileName="D://temp//tempdata//product4FileReader.txt";
+        String fileName = ReadByFileInpuStream.class.getResource("/product4FileReader.txt").getPath();
         String encoding="utf-8";
         File file = new File(fileName);
         if(file.isFile() && file.exists()) {

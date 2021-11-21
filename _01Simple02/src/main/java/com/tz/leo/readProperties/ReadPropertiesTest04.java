@@ -21,7 +21,5 @@ public class ReadPropertiesTest04 {
         key is : redis.ip  ;value is :127.0.0.1
         key is : redis.port  ;value is :6379
         */
-
-
     }
 }
